@@ -58,7 +58,6 @@ public class ArticleController {
         //3. 뷰 페이지 설정하기
         return "articles/index";
     }
-    //올라와.
     @GetMapping("/articles/{id}/edit")
     public String edit(@PathVariable Long id, Model model){
         //수정할 데이터 가져오기
