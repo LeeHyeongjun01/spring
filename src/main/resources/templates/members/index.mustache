@@ -9,15 +9,15 @@
     </tr>
     </thead>
     <tbody>
-    {{#memberList}}
+    {{#members}}
         <tr>
-            <th>{{id2}}</th>
-            <td><a href="/member/{{id2}}">{{email}}</a></td>
-            <td>{{content}}</td>
+            <th>{{id}}</th>
+            <td><a href="/members/{{id}}">{{email}}</a></td>
+            <td>{{password}}</td>
         </tr>
-    {{/memberList}}
+    {{/members}}
     </tbody>
 </table>
-<a href="/signup">New Member</a>
+<a href="/members/new">회원가입</a>
 
 {{>layouts/footer}}

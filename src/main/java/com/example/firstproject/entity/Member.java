@@ -1,9 +1,6 @@
 package com.example.firstproject.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -14,8 +11,8 @@ import lombok.*;
 
 public class Member {
     @Id
-    @GeneratedValue
-    private Long id2;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)// DB가 id 자동 생성
+    private Long id;
     @Column //DTO필드를 작성할 때와 마찬가질 title 필드를 생성해주는데 @컬럼을 붙여 DB에서 인식할 수 있게 해준다.
     private String email;
     @Column // title과 content 두 필드가 DB테이블의 각 열과 연결된다.
